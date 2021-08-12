@@ -28,7 +28,6 @@ namespace ConfigurationProvider
 
             services.AddHttpContextAccessor();
             services.Configure<JwtConfiguration>(Configuration.GetSection(JwtConfiguration.SectionName));
-            services.Configure<TestConfiguration>(Configuration.GetSection(TestConfiguration.SectionName));
 
             services.AddTransient<ICountryCodeProvider, JwtCountryCodeProvider>();
         }

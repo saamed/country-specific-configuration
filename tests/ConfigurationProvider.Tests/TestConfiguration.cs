@@ -1,4 +1,4 @@
-namespace ConfigurationProvider
+namespace ConfigurationProvider.Tests
 {
     public class TestConfiguration
     {

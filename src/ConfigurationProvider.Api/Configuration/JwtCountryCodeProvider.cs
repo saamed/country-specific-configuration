@@ -1,4 +1,3 @@
-using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
@@ -34,11 +33,6 @@ namespace ConfigurationProvider.Configuration
             if (!context.Request.Headers.TryGetValue(AuthorizationHeaderName, out var token))
             {
                 return null;
-            }
-
-            if (token.Count > 1)
-            {
-                throw new Exception("Ambiguous authorization headers");
             }
 
             var tokenValue = ((string) token).Split(" ").Last();
